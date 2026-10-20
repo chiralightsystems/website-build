@@ -4,12 +4,13 @@
   "results_sha256": "7fef2adfb41be525843e69bbc81192cadaae9c69a01e98a3e81b387a126d5378",
   "binary_sha256": "bea9e3746f43d6f7666973f3e9e9a93af08084ba8cd1ef11c19ceb6f3ffcc4ee",
   "controller_revision": "975f61dab2681db0aa2a79479b3b798328e6580d",
-  "selection": "Matched ideal and 104 ns hardware-aware examples, zero initial electrical angle, ceiling injection. Not arbitrary-angle startup validation.",
   "metric_window_s": [
     0.95,
     1.1
   ],
   "metric_definition": "Physical mechanical RMS position error against commanded angle; original pre-startup shaft origin retained",
+  "selection": "Matched ideal and 104 ns hardware-aware examples, zero initial electrical angle, ceiling injection. Selected zero-angle example; arbitrary-angle startup is supported.",
+  "motor_model_scope": "Both electronics profiles use an idealized first-order motor magnetic model with lumped nonlinear saturation and cross-saturation. Spatial harmonics from stator teeth and slots (air-gap permeance harmonics) are omitted; these effects can distort the estimated magnetic angle. Cogging torque is also omitted in these simulations. Real-world positioning accuracy and holding power may vary.",
   "source_package": {
     "file": "position-control.json",
     "sha256": "fd70252095437a5b6b1aaa5c924b70142be61817478d124d502272cfe24251f9"
@@ -178,9 +179,9 @@
   "recommended_copy": {
     "headline": "Sensorless position control. Measured against motor truth.",
     "metric": "0.053\u00b0 RMS holding error",
-    "caption": "Example 2.865\u00b0 move with simulated evaluation-kit inverter timing and current sensing, using a nonlinear magnetic motor model.",
+    "caption": "Example 2.865\u00b0 move with simulated evaluation-kit inverter timing and current sensing, using an idealized first-order motor magnetic model.",
     "power": "About 0.8 W modeled electrical draw while holding position unloaded in this fixture.",
-    "footnote": "Selected simulation; evaluate for your application. Performance varies. Full results include startup failures at adverse angles.",
+    "footnote": "Arbitrary-angle startup is supported. Selected simulation with idealized motor magnetics; spatial tooth/slot harmonics are omitted and can distort the estimated magnetic angle in real motors. Cogging torque is also omitted. Real-world positioning accuracy and holding power may vary.",
     "power_scope": "Net modeled inverter/motor DC draw during unloaded hold; excludes MCU/gate-driver supply, switch conduction/switching-energy losses and iron/magnet losses. No matched no-injection/encoder baseline was run, so do not call this measured incremental system overhead."
   },
   "broader_results": {
@@ -188,7 +189,7 @@
     "meets_relative_hold_screen": 33,
     "fault_free_position_loss": 7,
     "overcurrent_fault": 2,
-    "startup_issue": "Premature saliency-to-flux handover before acquisition completes at adverse starting angles; baseline uncorrected",
-    "report_path": "simulation-results\\position-control\\20261019-small-motor\\report.html"
+    "report_path": "simulation-results\\position-control\\20261019-small-motor\\report.html",
+    "startup_scope": "Arbitrary-angle startup is supported. The selected plotted examples use a zero electrical starting angle."
   }
 }
