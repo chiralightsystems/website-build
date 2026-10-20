@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "title": "Sensorless position control: selected nonlinear simulation",
+  "results_sha256": "7fef2adfb41be525843e69bbc81192cadaae9c69a01e98a3e81b387a126d5378",
+  "binary_sha256": "bea9e3746f43d6f7666973f3e9e9a93af08084ba8cd1ef11c19ceb6f3ffcc4ee",
+  "controller_revision": "975f61dab2681db0aa2a79479b3b798328e6580d",
+  "selection": "Matched ideal and 104 ns hardware-aware examples, zero initial electrical angle, ceiling injection. Not arbitrary-angle startup validation.",
+  "metric_window_s": [
+    0.95,
+    1.1
+  ],
+  "metric_definition": "Physical mechanical RMS position error against commanded angle; original pre-startup shaft origin retained",
+  "source_package": {
+    "file": "position-control.json",
+    "sha256": "fd70252095437a5b6b1aaa5c924b70142be61817478d124d502272cfe24251f9"
+  },
+  "fixture": {
+    "resistance_ohm": 0.019,
+    "ld_H": 1.5e-05,
+    "lq_H": 3e-05,
+    "flux_Wb": 0.007,
+    "pole_pairs": 8,
+    "bus_V": 36,
+    "inertia_kgm2": 0.001,
+    "friction_Nms": 0.002,
+    "current_limit_A": 20,
+    "temperature_C": 25,
+    "nonlinear_BH": true
+  },
+  "cases": {
+    "ideal": {
+      "id": "ideal-injection-ceiling-angle-0",
+      "native_path": "simulation-results\\position-control\\20261019-small-motor\\cases\\ideal-injection-ceiling-angle-0\\native.json",
+      "native_sha256": "d529508fa62f7fbfa3e4bde04557748c98384044ecd5851dcba65b4b0c1389db",
+      "trace_path": "simulation-results\\position-control\\20261019-small-motor\\cases\\ideal-injection-ceiling-angle-0\\trace.csv.gz",
+      "trace_sha256": "e13af0690abea6de8f566cd90634ba07f23cb1ff467f202ada7b39ff8fb9e5a9",
+      "rms_deg": 0.003728952384006193,
+      "max_abs_hold_error_deg": 0.005545365146399005,
+      "step_degrees": 2.8647889756541165,
+      "settling_1deg_s": 0.0997216,
+      "settling_definition": "Error within 1 mechanical degree and speed within 0.5 rad/s; native sustained criterion",
+      "electronics": {
+        "inverter_model": "fast",
+        "sample_rate_Hz": 104166.666667,
+        "pwm_carrier_Hz": 52083.3333333,
+        "nominal_injection_Hz": 26041.6666667,
+        "effective_blank_s": 0,
+        "preload_delay_updates": 1,
+        "switching_energy_loss_model_enabled": false,
+        "current_sense": {
+          "enabled": false,
+          "half_range_A": 0,
+          "enob": 0,
+          "converter_bits": 0
+        }
+      }
+    },
+    "kit": {
+      "id": "kit-injection-ceiling-angle-0",
+      "native_path": "simulation-results\\position-control\\20261019-small-motor\\cases\\kit-injection-ceiling-angle-0\\native.json",
+      "native_sha256": "d88343d784895c9fa9c0a0f73b9b2c00ea2329341d60f8279b2a4fcf5d66374c",
+      "trace_path": "simulation-results\\position-control\\20261019-small-motor\\cases\\kit-injection-ceiling-angle-0\\trace.csv.gz",
+      "trace_sha256": "3aa9196d5cb370cb01911e600a43e26d6ffc5e1307e93cd3ca4d6eb3aeab88bf",
+      "rms_deg": 0.0533330989435582,
+      "max_abs_hold_error_deg": 0.057641969868460596,
+      "step_degrees": 2.8647889756541165,
+      "settling_1deg_s": 0.0964576,
+      "settling_definition": "Error within 1 mechanical degree and speed within 0.5 rad/s; native sustained criterion",
+      "electronics": {
+        "inverter_model": "fast",
+        "sample_rate_Hz": 104166.666667,
+        "pwm_carrier_Hz": 52083.3333333,
+        "nominal_injection_Hz": 26041.6666667,
+        "effective_blank_s": 1.04e-07,
+        "preload_delay_updates": 1,
+        "switching_energy_loss_model_enabled": false,
+        "current_sense": {
+          "enabled": true,
+          "half_range_A": 250,
+          "enob": 13,
+          "converter_bits": 16
+        }
+      }
+    }
+  },
+  "trace": {
+    "file": "position-command-vs-actual.csv",
+    "sha256": "598556507683af2e8d54a8991dd7038afdd66a60f325041a5d86e1d4887f8f12",
+    "points": 425,
+    "units": "seconds relative to command at campaign t=0.35; mechanical degrees",
+    "sampling": "First retained native trace sample in each 2 ms display bucket, plus command changes. Display only; headline RMS uses all 15,625 native hold samples.",
+    "domain_s": [
+      -0.1,
+      0.75
+    ],
+    "no_rezero_or_alignment": true,
+    "columns": [
+      "time_from_command_s",
+      "command_deg",
+      "actual_ideal_deg",
+      "actual_kit_deg"
+    ]
+  },
+  "power": {
+    "ideal": {
+      "profile": "ideal",
+      "interval_start_s": 0.249984,
+      "interval_end_s": 0.3499776,
+      "elapsed_s": 0.09999359999999999,
+      "net_dc_energy_J": 0.07068229441000007,
+      "net_dc_power_W": 0.7068681836637553,
+      "diode_loss_W": 0.0,
+      "method": "Difference of deterministic cumulative native-energy prefix runs, divided by actual simulated-time difference; endpoints share four-sample HFI and carrier phase",
+      "scope": "Unloaded zero-position hold after lock; net modeled DC draw, not incremental encoder/no-injection overhead or total electronics power",
+      "reports": [
+        {
+          "path": "simulation-results\\position-control\\20261019-website-power-check\\ideal-0.2499828-native.json",
+          "sha256": "325c1049da7d36f9a876a49de9a318b8616e0983b94dfb2b7b4594e150f66b61",
+          "argv_record_sha256": "e1a19f50b82ac150790e2e070fa3e9dbcbf1084f732a80daf6cb163e27f0308a",
+          "completed": true,
+          "fault_count": 0,
+          "samples": 26040,
+          "duration_simulated_s": 0.249984,
+          "cumulative_dc_energy_J": 1.06746109407,
+          "cumulative_diode_loss_J": 0
+        },
+        {
+          "path": "simulation-results\\position-control\\20261019-website-power-check\\ideal-0.3499764-native.json",
+          "sha256": "6a63e35d69789b157f9b4fe33f329159ac467e949088f426dbdb03be87472b34",
+          "argv_record_sha256": "e2bc67d60fa39a22c2523421b788833bb7e7d7e8761e3673e7aadbfbe2863b85",
+          "completed": true,
+          "fault_count": 0,
+          "samples": 36456,
+          "duration_simulated_s": 0.3499776,
+          "cumulative_dc_energy_J": 1.13814338848,
+          "cumulative_diode_loss_J": 0
+        }
+      ]
+    },
+    "kit": {
+      "profile": "kit",
+      "interval_start_s": 0.249984,
+      "interval_end_s": 0.3499776,
+      "elapsed_s": 0.09999359999999999,
+      "net_dc_energy_J": 0.0791817335799998,
+      "net_dc_power_W": 0.7918680153529807,
+      "diode_loss_W": 0.08641317940148169,
+      "method": "Difference of deterministic cumulative native-energy prefix runs, divided by actual simulated-time difference; endpoints share four-sample HFI and carrier phase",
+      "scope": "Unloaded zero-position hold after lock; net modeled DC draw, not incremental encoder/no-injection overhead or total electronics power",
+      "reports": [
+        {
+          "path": "simulation-results\\position-control\\20261019-website-power-check\\kit-0.2499828-native.json",
+          "sha256": "d1c26c043b308519bb4771364adbb7de3c0135775ecffb2c1ee292c4eea6bfa3",
+          "argv_record_sha256": "56023c7429e317f9f240ea9bf1124e2525c430b9c6cddd3c3970c5aaf7838295",
+          "completed": true,
+          "fault_count": 0,
+          "samples": 26040,
+          "duration_simulated_s": 0.249984,
+          "cumulative_dc_energy_J": 1.09222373175,
+          "cumulative_diode_loss_J": 0.0338957305425
+        },
+        {
+          "path": "simulation-results\\position-control\\20261019-website-power-check\\kit-0.3499764-native.json",
+          "sha256": "592c6b1ed4227d5d94a8c7d3737cdaad9fca5e9da69f3256abf430718e81ce31",
+          "argv_record_sha256": "e7188aaef5a1851afc0fac45ae4fb474384a3bdf17da035573a1677be1e72771",
+          "completed": true,
+          "fault_count": 0,
+          "samples": 36456,
+          "duration_simulated_s": 0.3499776,
+          "cumulative_dc_energy_J": 1.17140546533,
+          "cumulative_diode_loss_J": 0.0425364954383
+        }
+      ]
+    },
+    "kit_minus_ideal_W": 0.08499983168922542,
+    "difference_scope": "Matched modeled kit-versus-ideal unloaded hold difference only; not encoder-versus-sensorless overhead"
+  },
+  "recommended_copy": {
+    "headline": "Sensorless position control. Measured against motor truth.",
+    "metric": "0.053\u00b0 RMS holding error",
+    "caption": "Example 2.865\u00b0 move with simulated evaluation-kit inverter timing and current sensing, using a nonlinear magnetic motor model.",
+    "power": "About 0.8 W modeled electrical draw while holding position unloaded in this fixture.",
+    "footnote": "Selected simulation; evaluate for your application. Performance varies. Full results include startup failures at adverse angles.",
+    "power_scope": "Net modeled inverter/motor DC draw during unloaded hold; excludes MCU/gate-driver supply, switch conduction/switching-energy losses and iron/magnet losses. No matched no-injection/encoder baseline was run, so do not call this measured incremental system overhead."
+  },
+  "broader_results": {
+    "case_count": 42,
+    "meets_relative_hold_screen": 33,
+    "fault_free_position_loss": 7,
+    "overcurrent_fault": 2,
+    "startup_issue": "Premature saliency-to-flux handover before acquisition completes at adverse starting angles; baseline uncorrected",
+    "report_path": "simulation-results\\position-control\\20261019-small-motor\\report.html"
+  }
+}
