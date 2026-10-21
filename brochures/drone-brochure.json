@@ -1,0 +1,51 @@
+{
+  "schema_version": 2,
+  "publication_date": "2026-10-20",
+  "pages": 4,
+  "builder_sha256": "8ed1fee8b8dd7e8b884df4f2800193685cf2bff9de1468b8c93630f325cf46e5",
+  "sources": [
+    {
+      "file": "standard-motor-drone-oem-brief.pdf",
+      "sha256": "027e225ca1ad6e466750fa7ce7ae78f87290d4a71f7614db7aba5785f17cd118"
+    },
+    {
+      "file": "standard-motor-4s-soc-flight-time.pdf",
+      "sha256": "5164f149d543e823022ebfc3f8b09f0846fb399772bcc3c807aaed5098ff78da"
+    },
+    {
+      "file": "standard-motor-4s-soc-flight-time.json",
+      "sha256": "1bf82faa8d8d88862577058f16a5312b49e63e88c61256cbd0ade45615b76937"
+    }
+  ],
+  "page_sources": [
+    {
+      "page": 1,
+      "source": "standard-motor-4s-soc-flight-time.pdf",
+      "source_page": 1,
+      "changes": "Primary mission/reserve page composed as cover; source charts and payload card retained; design options, historical highlights, model/current/policy qualifications and contact details added. Secondary source page remains in supporting provenance."
+    },
+    {
+      "page": 2,
+      "source": "standard-motor-drone-oem-brief.pdf",
+      "source_page": 2,
+      "changes": "Unified publication header and footer; body and figures retained"
+    },
+    {
+      "page": 3,
+      "source": "standard-motor-drone-oem-brief.pdf",
+      "source_page": 3,
+      "changes": "Unified publication header and footer; body and figures retained"
+    },
+    {
+      "page": 4,
+      "source": "standard-motor-drone-oem-brief.pdf",
+      "source_page": 4,
+      "changes": "Unified publication header and footer; body and figures retained"
+    }
+  ],
+  "asset": {
+    "path": "/brochures/standard-motor-drone-brochure.pdf",
+    "sha256": "d766d5972514f7f92c5f2f29699c4e31640ad75e15c1b0f2615108bc2871a943",
+    "bytes": 293931
+  }
+}
