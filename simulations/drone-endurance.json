@@ -3,7 +3,7 @@
   "publication_date": "2026-10-20",
   "source_package": {
     "file": "standard-motor-4s-soc-flight-time.json",
-    "sha256": "1bf82faa8d8d88862577058f16a5312b49e63e88c61256cbd0ade45615b76937"
+    "sha256": "9514e6b45b743c8258212d3df27dd2f42b42536788e3a2173345fd3ceeff319b"
   },
   "source_replay": {
     "file": "output/plots/mission-reserve-endurance.json",
@@ -39,15 +39,15 @@
       "capacity_Ah": 4,
       "constant_cell_resistance_ohm": 0.005,
       "OCV": "Synthetic bench LiPo OCV/SOC curve",
-      "controller_code": "Actual compiled standard-motor, AM32 and official BLHeli_S code",
+      "controller_code": "Actual compiled Chiralight standard-motor, AM32 and official BLHeli_S code",
       "motor": "Nonlinear magnetic B/H plant; table-calibrated Gemfan 1050 three-blade propeller fixture",
       "motor_parameters": "Directly measured 640KV electrical parameters; modeled 800KV and 900KV rewinds",
       "FOC": "1 A injection target; dedicated field weakening off; MTPA and overmodulation retained",
       "comparison": "Matched mission load and maneuver criterion within each winding/pack scenario; best tested AM32 and BLHeli_S settings selected by integrated mission duration"
     },
-    "builder_sha256": "f98ec41f5ef0adedcc8baba447c1c44ce84e6d2a172cb388a277155e1b6bd66d",
+    "builder_sha256": "907f66a996517c963a210c08265891b2a128d9dc0af0f1e9361b874a01b06f48",
     "output_hashes": {
-      "standard-motor-4s-soc-flight-time.pdf": "5164f149d543e823022ebfc3f8b09f0846fb399772bcc3c807aaed5098ff78da",
+      "standard-motor-4s-soc-flight-time.pdf": "00f8efd7a53d64731939101794eb3166ce4eefcddd8a075a5bed9cd1afb2052b",
       "standard-motor-4s-soc-flight-time-primary-graph.png": "66757fdee0a98a025d43710bd8c7d1418de20c65f2216f223649f8a4e91b5ea5",
       "standard-motor-4s-soc-flight-time-primary-graph.svg": "d0eb40d536a1a55b5e515128d7380069cfce8976f266d81f98ade9c08910f1b6",
       "standard-motor-4s-soc-flight-time-secondary-graph.png": "fc2fdef3bfa199f8ed641f359d40e4b98f1140ffe8aa5c8cfcf08ae88a1e5688",
@@ -8229,7 +8229,7 @@
   "assets": {
     "brochure": {
       "path": "/brochures/standard-motor-4s-soc-flight-time.pdf",
-      "sha256": "5164f149d543e823022ebfc3f8b09f0846fb399772bcc3c807aaed5098ff78da"
+      "sha256": "00f8efd7a53d64731939101794eb3166ce4eefcddd8a075a5bed9cd1afb2052b"
     },
     "graph": {
       "src": "/simulations/drone-endurance-graph.png",

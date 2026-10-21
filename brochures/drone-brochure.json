@@ -1,51 +1,67 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "publication_date": "2026-10-20",
   "pages": 4,
-  "builder_sha256": "8ed1fee8b8dd7e8b884df4f2800193685cf2bff9de1468b8c93630f325cf46e5",
+  "builder_sha256": "a6efb1aaf0dd7683d70506144dabbd1b1fa8cc44477b4ec989916a31655d837b",
   "sources": [
     {
       "file": "standard-motor-drone-oem-brief.pdf",
-      "sha256": "027e225ca1ad6e466750fa7ce7ae78f87290d4a71f7614db7aba5785f17cd118"
+      "sha256": "b7f5ecdbca167a9791449df602b50b5ae75b87589039db386c1c2ad820a744fa"
     },
     {
       "file": "standard-motor-4s-soc-flight-time.pdf",
-      "sha256": "5164f149d543e823022ebfc3f8b09f0846fb399772bcc3c807aaed5098ff78da"
+      "sha256": "00f8efd7a53d64731939101794eb3166ce4eefcddd8a075a5bed9cd1afb2052b"
     },
     {
       "file": "standard-motor-4s-soc-flight-time.json",
-      "sha256": "1bf82faa8d8d88862577058f16a5312b49e63e88c61256cbd0ade45615b76937"
+      "sha256": "9514e6b45b743c8258212d3df27dd2f42b42536788e3a2173345fd3ceeff319b"
+    },
+    {
+      "file": "corrected-drone-interior-evidence.json",
+      "sha256": "77307aa7f240d530e4e54338bef349449f6c5e04065b9790fd53a75d09426f82"
+    },
+    {
+      "file": "standard-motor-drone-oem-brief.json",
+      "sha256": "e37d09bff477bd479f2cb1275f8ecae006706fd9fc114d9382577408d4ab5efa"
     }
   ],
+  "interior_evidence": {
+    "path": "/simulations/drone-interiors.json",
+    "sha256": "7ef08bf400ccd8bb65a1a5ad2b653cabf733a33de930b6d91b1ad5f25c74fb04",
+    "source": {
+      "path": "output/plots/corrected-drone-interior-evidence.json",
+      "sha256": "77307aa7f240d530e4e54338bef349449f6c5e04065b9790fd53a75d09426f82"
+    }
+  },
   "page_sources": [
     {
       "page": 1,
       "source": "standard-motor-4s-soc-flight-time.pdf",
       "source_page": 1,
-      "changes": "Primary mission/reserve page composed as cover; source charts and payload card retained; design options, historical highlights, model/current/policy qualifications and contact details added. Secondary source page remains in supporting provenance."
+      "changes": "Primary mission/reserve page composed as cover; source charts and payload card retained; design options, control-comparison references, model/current/policy qualifications and contact details added. Secondary source page remains in supporting provenance."
     },
     {
       "page": 2,
       "source": "standard-motor-drone-oem-brief.pdf",
       "source_page": 2,
-      "changes": "Unified publication header and footer; body and figures retained"
+      "changes": "Verified corrected-model comparison body and figures retained; unified publication header and footer"
     },
     {
       "page": 3,
       "source": "standard-motor-drone-oem-brief.pdf",
       "source_page": 3,
-      "changes": "Unified publication header and footer; body and figures retained"
+      "changes": "Verified corrected-model comparison body and figures retained; unified publication header and footer"
     },
     {
       "page": 4,
       "source": "standard-motor-drone-oem-brief.pdf",
       "source_page": 4,
-      "changes": "Unified publication header and footer; body and figures retained"
+      "changes": "Verified corrected-model comparison body and figures retained; unified publication header and footer"
     }
   ],
   "asset": {
     "path": "/brochures/standard-motor-drone-brochure.pdf",
-    "sha256": "d766d5972514f7f92c5f2f29699c4e31640ad75e15c1b0f2615108bc2871a943",
-    "bytes": 293931
+    "sha256": "217ec8862725e0f345dfe32916554aa41e1913085b551e9a60aaa86de55184ee",
+    "bytes": 783134
   }
 }

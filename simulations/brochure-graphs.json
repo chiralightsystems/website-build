@@ -1,61 +1,83 @@
 {
   "source_pdf": {
     "filename": "standard-motor-drone-oem-brief.pdf",
-    "sha256": "027e225ca1ad6e466750fa7ce7ae78f87290d4a71f7614db7aba5785f17cd118",
+    "sha256": "b7f5ecdbca167a9791449df602b50b5ae75b87589039db386c1c2ad820a744fa",
     "pages": 4
+  },
+  "source_evidence": {
+    "path": "output/plots/corrected-drone-interior-evidence.json",
+    "sha256": "77307aa7f240d530e4e54338bef349449f6c5e04065b9790fd53a75d09426f82"
+  },
+  "publication_manifest": {
+    "path": "output/pdf/standard-motor-drone-oem-brief.json",
+    "sha256": "e37d09bff477bd479f2cb1275f8ecae006706fd9fc114d9382577408d4ab5efa"
   },
   "export": {
     "format": "WebP",
     "lossless": true,
-    "pixels_per_point": 3,
-    "crop_coordinates": "PDF points from the top-left: left, top, right, bottom",
-    "background": "white"
+    "source": "entire published PNG",
+    "pixel_equality_verified": true
   },
   "graphs": [
     {
+      "id": "hardware",
+      "src": "/simulations/drone-board-profiles.webp",
       "file": "drone-board-profiles.webp",
-      "campaign": "stock-board timing and sensing",
+      "width": 2250,
+      "height": 1179,
+      "bytes": 40270,
+      "sha256": "de6425f18123c9039aef83e879840fc5a30e73346c2b834c4baa4642c95b741f",
+      "source": {
+        "path": "output/pdf/standard-motor-drone-oem-brief-hardware-graph.png",
+        "sha256": "a5f2efa581d031404f9e31654f2620f130874a16e101396d0b3b6710e61ee384"
+      },
       "page": 4,
-      "clip_pt": [
-        43,
-        306,
-        552,
-        658
-      ],
-      "width": 1527,
-      "height": 1056,
-      "bytes": 86874,
-      "sha256": "9ec0cda5e3597ded263a3430808442b64b176a5fd55d4577d3cbb85ae91fe21b"
+      "graphBoundsPt": [
+        45,
+        387,
+        550,
+        652
+      ]
     },
     {
+      "id": "voltageEfficiency",
+      "src": "/simulations/drone-voltage-headroom.webp",
       "file": "drone-voltage-headroom.webp",
-      "campaign": "earlier voltage and efficiency sweep",
+      "width": 2250,
+      "height": 1200,
+      "bytes": 47256,
+      "sha256": "069058af328e1bbba15ad4950158ae85268f0ce50911f123a777744556dff4de",
+      "source": {
+        "path": "output/pdf/standard-motor-drone-oem-brief-voltage-efficiency-graph.png",
+        "sha256": "1bdf4c2e1099d8a4918cc80295f82fc0d6ebba63886cbed2a92097c1053e3463"
+      },
       "page": 2,
-      "clip_pt": [
-        40,
-        398,
-        553,
-        677
-      ],
-      "width": 1539,
-      "height": 837,
-      "bytes": 31500,
-      "sha256": "6d494f6eed365de4e9befd8265cf5ec2e3e095c127d5083cf71e0485f5f020fe"
+      "graphBoundsPt": [
+        45,
+        412,
+        550,
+        680
+      ]
     },
     {
+      "id": "dynamics",
+      "src": "/simulations/drone-dynamic-response.webp",
       "file": "drone-dynamic-response.webp",
-      "campaign": "earlier dynamic response comparison",
+      "width": 2250,
+      "height": 1296,
+      "bytes": 50750,
+      "sha256": "3c5d47555b8c547d3a5c0497da3594fe29dbba960edc8f6e48b6a1f24f678010",
+      "source": {
+        "path": "output/pdf/standard-motor-drone-oem-brief-dynamic-response-graph.png",
+        "sha256": "66ee512a869fb074abd38a1b82faf6d17fbabb9595b8b8a3bf9b278e578d4412"
+      },
       "page": 3,
-      "clip_pt": [
-        43,
-        214,
-        552,
-        505
-      ],
-      "width": 1527,
-      "height": 873,
-      "bytes": 42550,
-      "sha256": "0bc794df9d8889b8e9c8e78abc5e17cf676bd8b4f06e67a7613da996d72382d1"
+      "graphBoundsPt": [
+        45,
+        219,
+        550,
+        511
+      ]
     }
   ]
 }
