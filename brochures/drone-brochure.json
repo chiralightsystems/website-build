@@ -1,67 +1,60 @@
 {
-  "schema_version": 3,
-  "publication_date": "2026-10-20",
-  "pages": 4,
-  "builder_sha256": "a6efb1aaf0dd7683d70506144dabbd1b1fa8cc44477b4ec989916a31655d837b",
+  "schema_version": 5,
+  "publication_date": "2026-10-29",
+  "pages": 6,
+  "publication_method": "byte-identical verified six-section source PDF",
+  "sections": [
+    "Performance overview",
+    "Motor speed and battery reserve",
+    "Efficiency and voltage headroom",
+    "Dynamic response and startup",
+    "Inverter timing and current sensing",
+    "Throttle endpoints and assumptions"
+  ],
+  "builder_sha256": "baa1ab3b217aa812f7363456e14c30dc85a505fd5231f0645118fdedbe2d3cca",
+  "metadata_normalizer_sha256": "f3fca3371611da336b66c419ae2d919a631e57fe0e21020dfb32874b73ac3a4a",
   "sources": [
     {
       "file": "standard-motor-drone-oem-brief.pdf",
-      "sha256": "b7f5ecdbca167a9791449df602b50b5ae75b87589039db386c1c2ad820a744fa"
-    },
-    {
-      "file": "standard-motor-4s-soc-flight-time.pdf",
-      "sha256": "00f8efd7a53d64731939101794eb3166ce4eefcddd8a075a5bed9cd1afb2052b"
-    },
-    {
-      "file": "standard-motor-4s-soc-flight-time.json",
-      "sha256": "9514e6b45b743c8258212d3df27dd2f42b42536788e3a2173345fd3ceeff319b"
-    },
-    {
-      "file": "corrected-drone-interior-evidence.json",
-      "sha256": "77307aa7f240d530e4e54338bef349449f6c5e04065b9790fd53a75d09426f82"
+      "sha256": "c48b35871f4e3afa53b90fe1143c05f83d251922a120d44399d62235d5d46c04"
     },
     {
       "file": "standard-motor-drone-oem-brief.json",
-      "sha256": "e37d09bff477bd479f2cb1275f8ecae006706fd9fc114d9382577408d4ab5efa"
+      "sha256": "84ee063921dc1c6373fdbd5f3e0162eedf4142f39ed20a8a1cd40f9d1903ae95"
+    },
+    {
+      "file": "standard-motor-4s-soc-flight-time.pdf",
+      "sha256": "978dd7d3ac5e2a6029cae3fa813cfa97b3d99d2e28600168bbf1d5ab5766261c"
+    },
+    {
+      "file": "standard-motor-4s-soc-flight-time.json",
+      "sha256": "3848d01e22181213ebd6b474f28333054646c8175437fa4a3d137d39d1a3edcc"
     }
   ],
   "interior_evidence": {
     "path": "/simulations/drone-interiors.json",
-    "sha256": "7ef08bf400ccd8bb65a1a5ad2b653cabf733a33de930b6d91b1ad5f25c74fb04",
+    "sha256": "881ac6a78a7e4a1d2f3788f4d93b9d5504fc8ae8a7c70c8efea0039254e91208",
     "source": {
       "path": "output/plots/corrected-drone-interior-evidence.json",
-      "sha256": "77307aa7f240d530e4e54338bef349449f6c5e04065b9790fd53a75d09426f82"
+      "sha256": "7f7c0bad85dd600e0a43c7d5c72c4da8a24d42ac79862211b3b3c6a3f5316e2f"
     }
   },
-  "page_sources": [
-    {
-      "page": 1,
-      "source": "standard-motor-4s-soc-flight-time.pdf",
-      "source_page": 1,
-      "changes": "Primary mission/reserve page composed as cover; source charts and payload card retained; design options, control-comparison references, model/current/policy qualifications and contact details added. Secondary source page remains in supporting provenance."
-    },
-    {
-      "page": 2,
-      "source": "standard-motor-drone-oem-brief.pdf",
-      "source_page": 2,
-      "changes": "Verified corrected-model comparison body and figures retained; unified publication header and footer"
-    },
-    {
-      "page": 3,
-      "source": "standard-motor-drone-oem-brief.pdf",
-      "source_page": 3,
-      "changes": "Verified corrected-model comparison body and figures retained; unified publication header and footer"
-    },
-    {
-      "page": 4,
-      "source": "standard-motor-drone-oem-brief.pdf",
-      "source_page": 4,
-      "changes": "Verified corrected-model comparison body and figures retained; unified publication header and footer"
-    }
-  ],
+  "flight_time_claim": {
+    "rounded_gain_pct": 100.0,
+    "wording": "Up to 100% or greater",
+    "source": "simulation-results/drone-battery/20261023-buffered-mission-headline/headline-flight-replay.json",
+    "source_sha256": "da99eaf654350182e215b82828ef01beaac1c0d796eaeb961de3af27020e0930",
+    "comparison_controller_id": "am32-30",
+    "scope": "Modeled flight time in the 640KV/6S configuration; 1.5:1 TWR flight load and 3:1 TWR maneuver reserve"
+  },
+  "publication_review": {
+    "path": "build/brochure-push-20261030/verification.json",
+    "sha256": "1e2e5bb95587b7630b5aafd63ba988194f81e3ffee0cb08ccc02e421fc828729",
+    "check_count": 39
+  },
   "asset": {
     "path": "/brochures/standard-motor-drone-brochure.pdf",
-    "sha256": "217ec8862725e0f345dfe32916554aa41e1913085b551e9a60aaa86de55184ee",
-    "bytes": 783134
+    "sha256": "c48b35871f4e3afa53b90fe1143c05f83d251922a120d44399d62235d5d46c04",
+    "bytes": 1168083
   }
 }
